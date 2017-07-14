@@ -7570,7 +7570,7 @@ VixToolsImpersonateUser(VixCommandRequestHeader *requestMsg,   // IN
    }
    case VIX_USER_CREDENTIAL_ROOT:
    {
-      if ((requestMsg->requestFlags & VIX_REQUESTMSG_HAS_HASHED_SHARED_SECRET) &&
+      if (
           !VixToolsCheckIfAuthenticationTypeEnabled(gConfDictRef,
                                             VIX_TOOLS_CONFIG_AUTHTYPE_AGENTS)) {
           /*
